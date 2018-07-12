@@ -19,6 +19,9 @@ var schema = mongoose.Schema({
             type: String,
             required: true
         },
+        last_name: {
+            type: String
+        },
         score: {
             type: Number,
             default: 0

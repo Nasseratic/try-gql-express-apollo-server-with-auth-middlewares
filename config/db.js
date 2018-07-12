@@ -4,7 +4,7 @@ module.exports = {
      * The database connection string
      */
 
-    url: 'mongodb://localhost/db_name',
+    url: 'mongodb://root:rootroot123@ds018848.mlab.com:18848/product-gql-test-1',
 
     options: {
 

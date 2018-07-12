@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "unipress-test-1": {
+      "schemaPath": "app/graphql/schema.graphql",
+      "extensions": {
+          "endpoints": {
+            "dev": {
+              "url": "http://localhost:3001/graphql"
+            }
+          }
+      }
+    }  
+    
+  }
+}

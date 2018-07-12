@@ -17,7 +17,7 @@ module.exports = {
      * The `port` setting determines which TCP port your app will be deployed on.
      */
 
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3001,
 
     /**
      * Enabling trust proxy will have the following impact:

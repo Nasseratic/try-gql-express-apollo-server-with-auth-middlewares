@@ -1,5 +1,6 @@
 var express = require("express");
 var path = require("path");
+const gqlServer = require('./graphql/graphql');
 
 /* Building mongodb connection object */
 
@@ -36,6 +37,10 @@ app.use(require("express-validator")());
 app.use(require("body-parser").urlencoded(_config("body")));
 
 app.use(require("body-parser").json());
+
+
+app.use('/graphql', gqlServer );
+
 
 /* Defining the request.isAPI boolean flag */
 
@@ -117,7 +122,7 @@ app.use("/", function (req, res) {
 
 /* 500 error handler */
 
-app.use(function (error, req, res, next) {
-    return res.serverError(error.message);
-});
+// app.use(function (error, req, res, next) {
+//     return res.serverError(error.message);
+// });
 

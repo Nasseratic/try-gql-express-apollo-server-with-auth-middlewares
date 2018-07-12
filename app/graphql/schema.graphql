@@ -1,0 +1,18 @@
+# import * from 'modules/user/user.graphql'
+
+type Query{
+  user(id:ID):User 
+  users:[User] 
+}
+
+type Mutation{
+  newUser(user:UserInput):User
+  editUser(id:ID,user:UserInput):User
+}
+
+# we need to tell the server which types represent the root query
+# and root mutation types. We call them RootQuery and RootMutation by convention.
+schema {
+  query: Query
+  mutation: Mutation
+}
