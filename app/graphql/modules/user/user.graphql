@@ -1,8 +1,22 @@
 
 type User{
+  _id: ID
   username:String
   email:String
   password:String
+  first_name:String
+  last_name:String
+  score:Float
+  lang:String
+  created_at:String
+  updated_at:String
+}
+
+
+type UserRes{
+  _id: ID
+  username:String
+  email:String
   first_name:String
   last_name:String
   score:Float

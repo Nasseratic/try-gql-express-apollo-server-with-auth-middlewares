@@ -1,13 +1,14 @@
 # import * from 'modules/user/user.graphql'
 
 type Query{
-  user(id:ID):User 
-  users:[User] 
+  user(id:ID):UserRes 
+  users:[UserRes] 
 }
 
 type Mutation{
-  newUser(user:UserInput):User
-  editUser(id:ID,user:UserInput):User
+  login(pass:String,email:String): String
+  newUser(user:UserInput):UserRes
+  editUser(id:ID,user:UserInput): UserRes
 }
 
 # we need to tell the server which types represent the root query
