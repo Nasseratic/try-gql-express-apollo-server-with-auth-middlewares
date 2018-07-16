@@ -39,6 +39,7 @@ app.use(require("body-parser").urlencoded(_config("body")));
 app.use(require("body-parser").json());
 
 
+/* Setup GraphQL Server */
 app.use('/graphql', gqlServer );
 
 
@@ -121,8 +122,7 @@ app.use("/", function (req, res) {
 });
 
 /* 500 error handler */
-
-// app.use(function (error, req, res, next) {
-//     return res.serverError(error.message);
-// });
+app.use(function (error, req, res, next) {
+    return res.serverError(error.message);
+});
 
